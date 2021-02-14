@@ -1,0 +1,20 @@
+.makeStyles-divMenu-6 ul li {
+    list-style: none;
+    display: inline;
+    padding: 0px 20px 0px 0px;
+    position: relative;
+    left: 70%;
+    margin: 0px 0px 0px 0px;
+    bottom: 10px
+}
+
+.makeStyles-divMenu-6 ul li a {
+    background: black;
+    color: cornsilk;
+    padding: 8px 8px 8px 8px;
+}
+
+.makeStyles-divMenu-6 li a:hover {
+    background-color: cornsilk;
+    color: #000;
+}
