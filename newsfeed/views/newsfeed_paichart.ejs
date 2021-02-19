@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <!--  -->
+    <%-include('newsfeed_head')%>
+    <!--  -->
+<body>
+<div id="preloader">
+  <div id="status">&nbsp;</div>
+</div>
+<a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+<div class="container">
+  <header id="header">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="header_top">
+              <div class="header_top_left">
+                <ul class="top_nav">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+              <div class="header_top_right">
+                <p>Friday, December 05, 2045</p>
+              </div>
+            </div>
+        </div>
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="header_bottom">
+          <div class="logo_area"><a href="../index.html" class="logo"><img src="../images/logo.jpg" alt=""></a></div>
+          <div class="add_banner"><a href="#"><img src="../images/addbanner_728x90_V1.jpg" alt=""></a></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+ <!--  -->
+  <%-include('newsfeed_navigation')%>
+ <!--  -->
+
+  <section id="contentSection">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-8">
+        <div class="left_content">
+          <div class="single_page">
+            <ol class="breadcrumb">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="#">Technology</a></li>
+              <li class="active">Mobile</li>
+            </ol>
+            <h1>Morbi dapibus, enim quis luctus interdum</h1>
+            <div class="post_commentbox"> <a href="#"><i class="fa fa-user"></i>Wpfreeware</a> <span><i class="fa fa-calendar"></i>6:49 AM</span> <a href="#"><i class="fa fa-tags"></i>Technology</a> </div>
+               
+        
+             <% 
+             data.map(function(item,index){ %>
+            <tr>
+                <td><%=item.name %></td>
+                <td><%=item.value %></td>    
+            </tr>
+            <%
+               })
+               %>
+
+
+
+
+             <!-- paichart start -->
+            
+                <head>
+                  <!--Load the AJAX API-->
+                  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                  <script type="text/javascript">
+              
+                    // Load the Visualization API and the corechart package.
+                    google.charts.load('current', {'packages':['corechart']});
+              
+                    // Set a callback to run when the Google Visualization API is loaded.
+                    google.charts.setOnLoadCallback(drawChart);
+              
+                    // Callback that creates and populates a data table,
+                    // instantiates the pie chart, passes in the data and
+                    // draws it.
+                    function drawChart() {
+              
+                      // Create the data table.
+                      var data = new google.visualization.DataTable();
+                      data.addColumn('string', 'Topping');
+                      data.addColumn('number', 'Slices');
+                      data.addRows(
+                        [
+                        ['Patrol', 3],
+                        ['Desigle', 1],
+                        ['Gold', 1],
+                        ['Silver', 1],
+                      ]);
+              
+                      // Set chart options
+                      var options = {
+                                     'title':'Sensex Data',
+                                     'width':400,
+                                     'height':300};
+              
+                      // Instantiate and draw our chart, passing in some options.
+                      var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+                      chart.draw(data, options);
+                    }
+                  </script>
+                </head>
+                  <!--Div that will hold the pie chart-->
+                  <div id="chart_div"></div>
+             
+             <!-- paichart end -->
+
+            <div class="social_link">
+              <ul class="sociallink_nav">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+              </ul>
+            </div>
+            <div class="related_post">
+              <h2>Related Post <i class="fa fa-thumbs-o-up"></i></h2>
+              <ul class="spost_nav wow fadeInDown animated">
+                <li>
+                  <div class="media"> <a class="media-left" href="single_page.html"> <img src="../images/post_img1.jpg" alt=""> </a>
+                    <div class="media-body"> <a class="catg_title" href="single_page.html"> Aliquam malesuada diam eget turpis varius</a> </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="media"> <a class="media-left" href="single_page.html"> <img src="../images/post_img2.jpg" alt=""> </a>
+                    <div class="media-body"> <a class="catg_title" href="single_page.html"> Aliquam malesuada diam eget turpis varius</a> </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="media"> <a class="media-left" href="single_page.html"> <img src="../images/post_img1.jpg" alt=""> </a>
+                    <div class="media-body"> <a class="catg_title" href="single_page.html"> Aliquam malesuada diam eget turpis varius</a> </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="nav-slit"> <a class="prev" href="#"> <span class="icon-wrap"><i class="fa fa-angle-left"></i></span>
+        <div>
+          <h3>City Lights</h3>
+          <img src="../images/post_img1.jpg" alt=""/> </div>
+        </a> <a class="next" href="#"> <span class="icon-wrap"><i class="fa fa-angle-right"></i></span>
+        <div>
+          <h3>Street Hills</h3>
+          <img src="../images/post_img1.jpg" alt=""/> </div>
+        </a> </nav>
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <aside class="right_content">
+          <div class="single_sidebar">
+            <h2><span>Popular Post</span></h2>
+            <ul class="spost_nav">
+              <li>
+                <div class="media wow fadeInDown"> <a href="single_page.html" class="media-left"> <img alt="" src="../images/post_img1.jpg"> </a>
+                  <div class="media-body"> <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 1</a> </div>
+                </div>
+              </li>
+              <li>
+                <div class="media wow fadeInDown"> <a href="single_page.html" class="media-left"> <img alt="" src="../images/post_img2.jpg"> </a>
+                  <div class="media-body"> <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 2</a> </div>
+                </div>
+              </li>
+              <li>
+                <div class="media wow fadeInDown"> <a href="single_page.html" class="media-left"> <img alt="" src="../images/post_img1.jpg"> </a>
+                  <div class="media-body"> <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 3</a> </div>
+                </div>
+              </li>
+              <li>
+                <div class="media wow fadeInDown"> <a href="single_page.html" class="media-left"> <img alt="" src="../images/post_img2.jpg"> </a>
+                  <div class="media-body"> <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 4</a> </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+  <!-- footer start -->
+   <%-include('newsfeed_footer')%>
+  <!-- footer end -->
+</div>
+</body>
+</html>

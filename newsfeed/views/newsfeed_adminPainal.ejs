@@ -1,0 +1,144 @@
+
+
+  <section id="container" >
+      <!-- **********************************************************************************************************************************************************
+      TOP BAR CONTENT & NOTIFICATIONS
+      *********************************************************************************************************************************************************** -->
+      <!--header start-->
+      <%-include('newsfeed_headerAdminpainal')%>
+      <!--header end-->
+      
+      <!-- **********************************************************************************************************************************************************
+      MAIN SIDEBAR MENU
+      *********************************************************************************************************************************************************** -->
+      <!--sidebar start-->
+      <%-include('newsfeed_sidebarAdminpainal')%>
+      <!--sidebar end-->
+      
+      <!-- **********************************************************************************************************************************************************
+      MAIN CONTENT
+      *********************************************************************************************************************************************************** -->
+      <!--main content start-->
+      <section id="main-content">
+          <section class="wrapper">
+
+              <div class="row">
+                  <div class="col-lg-9 main-chart">
+                  
+                  	<div class="row mtbox">
+                  		<div class="col-md-2 col-sm-2 col-md-offset-1 box0">
+                  			<div class="box1">
+								  <span class="li_heart"></span>
+							  
+								  <h3></h3>
+									  
+                  			</div>
+					  			<p>Totol User's</p>
+                  		</div>
+                  		<div class="col-md-2 col-sm-2 box0">
+                  			<div class="box1">
+								<i class="fa fa-female" aria-hidden="true"></i>
+								  <h3></h3>
+                  			</div>
+					  			<p>Total Female &nbsp;</p>
+                  		</div>
+                  		<div class="col-md-2 col-sm-2 box0">
+                  			<div class="box1">
+								<i class="fa fa-male" aria-hidden="true"></i>
+								  
+								  <h3>
+									   
+								 </h3>
+                  			</div>
+					  			<p>Total Male</p>
+                  		</div>
+                  		<div class="col-md-2 col-sm-2 box0">
+                  			<div class="box1">
+					  			<span class="li_news"></span>
+					  			<h3>+10</h3>
+                  			</div>
+					  			<p>More than 10 news were added in your reader.</p>
+                  		</div>
+                  		<div class="col-md-2 col-sm-2 box0">
+                  			<div class="box1">
+					  			<span class="li_data"></span>
+					  			<h3>OK!</h3>
+                  			</div>
+					  			<p>Your server is working perfectly. Relax & enjoy.</p>
+                  		</div>
+                  	
+                  	</div><!-- /row mt -->	
+                  
+                      
+                      <div class="row mt">
+                      	<div class="col-md-4 col-sm-4 mb">
+                      		
+						</div>
+						  <!-- /col-md-4-->
+                      	
+
+                          <div class="col-md-4 col-sm-4 mb">
+                      
+						  </div>
+						  <!-- /col-md-4 -->
+                      	
+						 <div class="col-md-4 mb">
+							
+						</div>
+						<!-- /col-md-4 -->
+                      	
+
+                    </div><!-- /row -->
+                    
+                    				
+					<div class="row">
+				
+					</div>
+					<!-- /row -->
+					
+					<div class="row mt">
+                    
+					</div>
+					<!-- /row -->	
+					
+                  </div><!-- /col-lg-9 END SECTION MIDDLE -->
+                  
+                  
+      <!-- **********************************************************************************************************************************************************
+      RIGHT SIDEBAR CONTENT
+      *********************************************************************************************************************************************************** -->                  
+                  
+                  <div class="col-lg-3 ds">
+                       <!-- USERS ONLINE SECTION -->
+						<h3>USER'S</h3>
+					  <!-- First Member -->
+					  <% 
+					  data.map(function(item,index){%>
+						 <div class="desc">
+							 <div class="thumb">
+								 <img class="img-circle" src="/uploads/<%=item.picture%>" width="35px" height="35px" align="">
+							 </div>
+							 <div class="details">
+								 <p><a href="/admin_data/userview_Data"><%=item.first_name + " " +item.last_name%></a><br/>
+									<muted>Available</muted>
+								 </p>
+							 </div>
+					   </div>  
+				<%
+				
+			   });
+   
+				%>
+				  </div>
+                  </div><!-- /col-lg-3 -->
+              </div>
+          </section>
+      </section>
+
+      <!--main content end-->
+      <!--footer start-->
+    
+      <!--footer end-->
+  </section>
+
+

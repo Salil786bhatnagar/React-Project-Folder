@@ -1,0 +1,75 @@
+<head>
+    <title>NewsFeed</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/font.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/li-scroller.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/jquery.fancybox.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/theme.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/custom.css">
+    <style>
+        .morecontent span {
+    display: none;
+}
+.morelink {
+    display: block;
+}
+    </style>
+    <!--[if lt IE 9]>
+    <script src="/assets/js/html5shiv.min.js"></script>
+    <script src="/assets/js/respond.min.js"></script>
+    <![endif]-->
+    </head>
+    <script>
+        $(document).ready(function() {
+        // Configure/customize these variables.
+        var showChar = 100;  // How many characters are shown by default
+        var ellipsestext = "...";
+        var moretext = "Show more >";
+        var lesstext = "Show less";
+      
+        $('.more').each(function() {
+            var content = $(this).html();
+      
+            if(content.length > showChar) {
+      
+                var c = content.substr(0, showChar);
+                var h = content.substr(showChar, content.length - showChar);
+      
+                var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+      
+                $(this).html(html);
+            }
+      
+        });
+      
+        $(".morelink").click(function(){
+            if($(this).hasClass("less")) {
+                $(this).removeClass("less");
+                $(this).html(moretext);
+            } else {
+                $(this).addClass("less");
+                $(this).html(lesstext);
+            }
+            $(this).parent().prev().toggle();
+            $(this).prev().toggle();
+            return false;
+        });
+      });
+      </script>
+    <script src="/assets/js/jquery.min.js"></script> 
+    <script src="/assets/js/wow.min.js"></script> 
+    <script src="/assets/js/bootstrap.min.js"></script> 
+    <script src="/assets/js/slick.min.js"></script> 
+    <script src="/assets/js/jquery.li-scroller.1.0.js"></script> 
+    <script src="/assets/js/jquery.newsTicker.min.js"></script> 
+    <script src="/assets/js/jquery.fancybox.pack.js"></script> 
+    <script src="/assets/js/custom.js"></script>
+
+    

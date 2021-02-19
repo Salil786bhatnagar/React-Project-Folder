@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Registration</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="/assets1/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/assets1/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/assets1/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/assets1/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/assets1/vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="/assets1/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/assets1/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/assets1/vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/assets1/css/util.css">
+	<link rel="stylesheet" type="text/css" href="/assets1/css/main.css">
+<!--===============================================================================================-->
+</head>
+<body style="background-color: #666666;">
+	
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<br>
+			<div class="wrap-login100">
+				<form class="login100-form validate-form" method="post" action="/newsfeed_data/Newsfeed_inserReg" enctype="multipart/form-data">
+					
+					<span class="login100-form-title p-b-43">
+
+						NewsFeed Ragistration
+					</span>
+					<center><p style="color:green;"><%= msg %></p></center> 
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100" type="text" name="first_name">
+						<span class="focus-input100"></span>
+						<span class="label-input100">First Name</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100" type="text" name="last_name">
+						<span class="focus-input100"></span>
+						<span class="label-input100">Last Name</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<input type="radio" name="gender" value="male">Male
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<input type="radio" name="gender" value="female">Female
+						<span class="focus-input100"></span>
+						<span class="label-input100">Gender</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100" type="text" name="address" >
+						<span class="focus-input100"></span>
+						<span class="label-input100">address</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100" type="number" name="contact" >
+						<span class="focus-input100"></span>
+						<span class="label-input100">Contact Number</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100" type="text" name="zip_code" >
+						<span class="focus-input100"></span>
+						<span class="label-input100">Zip/Code</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<select name="place" class="input100">
+							<option value="place">Select Place</option>
+							<option value="Street">Street</option>
+							<option value="District">District</option>
+							<option value="City">City</option>
+						</select>
+						<span class="focus-input100"></span>
+						<span class="label-input100">Place</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100" type="email" name="email">
+						<span class="focus-input100"></span>
+						<span class="label-input100">Email</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Password is required">
+						<input class="input100" type="password" name="password">
+						<span class="focus-input100"></span>
+						<span class="label-input100">Password</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" >
+						<input class="input100" type="file" name="picture">
+						<span class="focus-input100"></span>
+						<span class="label-input100">Picture</span>
+					</div>
+
+					<div class="flex-sb-m w-full p-t-3 p-b-32">
+						<div class="contact100-form-checkbox">
+							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+							<label class="label-checkbox100" for="ckb1">
+								Remember me
+							</label>
+						</div>
+
+						<!-- <div>
+							<a href="#" class="txt1">
+								Forgot Password?
+							</a>
+						</div> -->
+					</div>
+			
+
+					<div class="container-login100-form-btn">
+						<input type="submit" class="login100-form-btn" value="Submit">
+					</div>
+					
+					<div class="text-center p-t-46 p-b-20">
+						<span class="txt2">
+							or <a href="/newsfeed_data/Newsfeed_login"><b>sign In</b> &nbsp;here</a> 
+						</span>
+					</div>
+
+					<div class="login100-form-social flex-c-m">
+						<a href="#" class="login100-form-social-item flex-c-m bg1 m-r-5">
+							<i class="fa fa-facebook-f" aria-hidden="true"></i>
+						</a>
+
+						<a href="#" class="login100-form-social-item flex-c-m bg2 m-r-5">
+							<i class="fa fa-twitter" aria-hidden="true"></i>
+						</a>
+					</div>
+				</form>
+
+				<div class="login100-more" style="background-image: url('/assets1/images/bg-01.jpg');">
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+
+	
+	
+<!--===============================================================================================-->
+	<script src="/assets1/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/assets1/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/assets1/vendor/bootstrap/js/popper.js"></script>
+	<script src="/assets1/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/assets1/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/assets1/vendor/daterangepicker/moment.min.js"></script>
+	<script src="/assets1/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="/assets1/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="/assets1/js/main.js"></script>
+
+</body>
+</html>

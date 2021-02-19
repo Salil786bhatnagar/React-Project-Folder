@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <!--  -->
+    <%-include('newsfeed_head')%>
+    <!--  -->
+<body>
+<div id="preloader">
+  <div id="status">&nbsp;</div>
+</div>
+<a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+<div class="container">
+    <header id="header">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="header_top">
+                  <div class="header_top_left">
+                    <ul class="top_nav">
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                  </div>
+                  <div class="header_top_right">
+                    <p>Friday, December 05, 2045</p>
+                  </div>
+                </div>
+            </div>
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="header_bottom">
+              <div class="logo_area"><a href="../index.html" class="logo"><img src="../images/logo.jpg" alt=""></a></div>
+              <div class="add_banner"><a href="#"><img src="../images/addbanner_728x90_V1.jpg" alt=""></a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+ <!--  -->
+ <%-include('newsfeed_navigation')%>
+ <!--  -->
+  <section id="newsSection">
+    <div class="row">
+      <div class="col-lg-12 col-md-12">
+           <div class="single_page">
+              <ol class="breadcrumb">
+               <li><a href="">Home</a></li>
+              </ol>
+            </div> 
+            <h2>Update Profile<i class="fa fa-thumbs-o-up"></i></h2>
+      </div>
+    </div>
+  </section>
+  <section id="contentSection">
+    <div class="row">
+      <div class="col-lg-9 col-md-9 col-sm-9">
+        <div class="left_content">
+          <div class="error_page">
+             <form action="/newsfeed_data/newsfeed_updateporfileId" method="POST">
+              <td>
+                <input type="text" name="edit_id" value="<%=data.user_id%>"></td>
+                <form>
+                 <table>
+                     <tr>
+                         <td>First Name:</td>
+                         <td><input type="text" name="first_name" placeholder="Enter your first name"></td>
+                     </tr>
+                     <tr>
+                        <td>Last Name:</td>
+                        <td><input type="text" name="last_name"   placeholder="Enter your Last name"></td>
+                    </tr>
+                    <tr>
+                        <td>Contact:</td>
+                        <td><input type="number" name="contact"  placeholder="Enter your contact number"></td>
+                    </tr>
+                     <tr>
+                         <td>User Email:</td>
+                         <td><input type="email" name="email" placeholder="Enter your email"></td>
+                     </tr>
+                     <tr>
+                         <td><input type="submit" value="Update Profile" class="btn btn-success update"></td>
+                     </tr>
+                     
+                 </table>
+             </form>
+            <span></span> <a href="/newsfeed_data/News_feed" class="wow fadeInLeftBig">Go to home page</a>
+         </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-3">
+        <div class="single_sidebar wow fadeInDown">
+          <h2><span>Links</span></h2>
+          <ul>
+            <li><a href="/newsfeed_data/latestpost_News">Latest Post</a></li>
+            <li><a href="/newsfeed_data/papularpost_News">Papular Post</a></li>
+            <li><a href="/newsfeed_data/sport_News">Sport's</a></li>
+            <li><a href="/newsfeed_data/fashion_News">Fashion</a></li>
+            <li><a href="/newsfeed_data/technology_News">Technology</a></li>
+            <li><a href="/newsfeed_data/politics_News">Politics Post</a></li>
+          </ul>
+        </div>
+    </div>
+    </div>
+  </section>
+ <!-- footer start -->
+ <%-include('newsfeed_footer')%>
+ <!-- footer end -->
+</div>
+</body>
+</html>
